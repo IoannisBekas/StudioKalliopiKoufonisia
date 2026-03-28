@@ -1,0 +1,92 @@
+{
+  "bathroom-cool": {
+    "source": "bathroom-cool.png",
+    "width": 951,
+    "height": 1216,
+    "variants": [
+      {
+        "file": "bathroom-cool-640.webp",
+        "width": 640,
+        "height": 818
+      },
+      {
+        "file": "bathroom-cool-951.webp",
+        "width": 951,
+        "height": 1216
+      }
+    ]
+  },
+  "bathroom-warm": {
+    "source": "bathroom-warm.png",
+    "width": 962,
+    "height": 1210,
+    "variants": [
+      {
+        "file": "bathroom-warm-640.webp",
+        "width": 640,
+        "height": 805
+      },
+      {
+        "file": "bathroom-warm-962.webp",
+        "width": 962,
+        "height": 1210
+      }
+    ]
+  },
+  "blue-door-patio": {
+    "source": "blue-door-patio.png",
+    "width": 1213,
+    "height": 786,
+    "variants": [
+      {
+        "file": "blue-door-patio-640.webp",
+        "width": 640,
+        "height": 415
+      },
+      {
+        "file": "blue-door-patio-960.webp",
+        "width": 960,
+        "height": 622
+      },
+      {
+        "file": "blue-door-patio-1213.webp",
+        "width": 1213,
+        "height": 786
+      }
+    ]
+  },
+  "koufonisia-harbor": {
+    "source": "koufonisia-harbor.jpg",
+    "width": 356,
+    "height": 475,
+    "variants": [
+      {
+        "file": "koufonisia-harbor-356.webp",
+        "width": 356,
+        "height": 475
+      }
+    ]
+  },
+  "stone-house-entry": {
+    "source": "stone-house-entry.png",
+    "width": 1213,
+    "height": 1186,
+    "variants": [
+      {
+        "file": "stone-house-entry-640.webp",
+        "width": 640,
+        "height": 626
+      },
+      {
+        "file": "stone-house-entry-960.webp",
+        "width": 960,
+        "height": 939
+      },
+      {
+        "file": "stone-house-entry-1213.webp",
+        "width": 1213,
+        "height": 1186
+      }
+    ]
+  }
+}

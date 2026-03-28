@@ -1,0 +1,7 @@
+dxdiag.txt
+*.docx
+build_docx.py
+extract_strings.py
+mathimatikos.css
+mathimatikos.js
+mc_qna.md
