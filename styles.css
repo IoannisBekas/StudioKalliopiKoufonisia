@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Bubble Sans";
+  src: url("assets/fonts/BubbleSans-1.01.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f6f8f7;
   --paper: #fbfcfa;
@@ -29,7 +37,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Bubble Sans", sans-serif;
   color: var(--ink);
   background:
     radial-gradient(circle at top left, rgba(217, 231, 240, 0.7), transparent 24%),
@@ -164,7 +172,7 @@ section[id] {
 }
 
 .brand__title {
-  font-family: "Source Serif 4", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-size: 2rem;
   line-height: 0.88;
   font-weight: 600;
@@ -377,7 +385,7 @@ section[id] {
 }
 
 .menu-nav a {
-  font-family: "Source Serif 4", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-size: clamp(2rem, 7vw, 3.3rem);
   line-height: 1;
 }
@@ -475,7 +483,7 @@ section[id] {
 
 .page-hero__panel p {
   margin: 0 0 8px;
-  font-family: "Source Serif 4", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-size: 1.55rem;
   line-height: 1;
 }
@@ -713,7 +721,7 @@ h2,
 h3,
 blockquote {
   margin: 0;
-  font-family: "Source Serif 4", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-weight: 600;
   line-height: 0.92;
 }
@@ -810,7 +818,7 @@ h2 {
 
 .hero__card p {
   margin: 0 0 8px;
-  font-family: "Source Serif 4", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 1;
 }
@@ -991,7 +999,7 @@ h2 {
 }
 
 .review-card--rating strong {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Bubble Sans", sans-serif;
   font-size: clamp(4rem, 7vw, 5.4rem);
   line-height: 0.88;
 }
