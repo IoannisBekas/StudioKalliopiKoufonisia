@@ -30,7 +30,8 @@ const normalizePage = (value) => {
     return "index.html";
   }
 
-  const normalized = value.split("/").pop();
+  const cleaned = value.split("#")[0].split("?")[0];
+  const normalized = cleaned.split("/").pop();
   return normalized && normalized.length > 0 ? normalized : "index.html";
 };
 
