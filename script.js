@@ -21,6 +21,9 @@ const translatableAltNodes = document.querySelectorAll("[data-i18n-alt]");
 const translatableMetaNodes = document.querySelectorAll("[data-i18n-content]");
 const languageButtons = document.querySelectorAll(".language-switcher__button");
 const pageLinks = document.querySelectorAll("a[href$='.html']");
+const greekUppercaseTargets = document.querySelectorAll(
+  "h1, h2, h3, h4, h5, h6, .section-label, .quote-card strong, .detail-list strong"
+);
 
 let lastFocusedElement = null;
 let ticking = false;
@@ -105,6 +108,24 @@ const syncCurrentPageLinks = () => {
   });
 };
 
+const stripDiacritics = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+const applyGreekUppercase = (language) => {
+  if (language !== "el") {
+    return;
+  }
+
+  greekUppercaseTargets.forEach((node) => {
+    const text = node.textContent;
+
+    if (!text) {
+      return;
+    }
+
+    node.textContent = stripDiacritics(text).toUpperCase();
+  });
+};
+
 const applyLanguage = (requestedLanguage, persist = true) => {
   const language = translations[requestedLanguage] ? requestedLanguage : DEFAULT_LANGUAGE;
   const copy = translations[language];
@@ -160,6 +181,7 @@ const applyLanguage = (requestedLanguage, persist = true) => {
   });
 
   syncLanguageButtons(language);
+  applyGreekUppercase(language);
 
   if (persist) {
     storeLanguage(language);
