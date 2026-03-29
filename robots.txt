@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ioannisbekas.github.io/StudioKalliopiKoufonisia/sitemap.xml
