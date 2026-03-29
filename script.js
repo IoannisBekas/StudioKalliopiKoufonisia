@@ -22,7 +22,7 @@ const translatableMetaNodes = document.querySelectorAll("[data-i18n-content]");
 const languageButtons = document.querySelectorAll(".language-switcher__button");
 const pageLinks = document.querySelectorAll("a[href$='.html']");
 const greekUppercaseTargets = document.querySelectorAll(
-  "h1, h2, h3, h4, h5, h6, .section-label, .quote-card strong, .detail-list strong"
+  "h1, h2, h3, h4, h5, h6, .section-label, .quote-card strong, .detail-list strong, .brand__title, .menu-nav a, .page-hero__panel p, .hero__card p, blockquote"
 );
 
 let lastFocusedElement = null;
