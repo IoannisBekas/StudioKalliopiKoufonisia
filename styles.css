@@ -1030,6 +1030,46 @@ body.scrolled .header-book:focus-visible {
   border-bottom: 1px solid rgba(255, 255, 255, 0.28);
 }
 
+.contact-actions .contact-action {
+  grid-template-columns: 44px minmax(0, 1fr);
+  column-gap: 18px;
+}
+
+.contact-action__icon {
+  grid-row: 1 / span 2;
+  width: 36px;
+  height: 36px;
+  align-self: center;
+  overflow: visible;
+  color: #9ec1da;
+}
+
+.contact-action--whatsapp .contact-action__icon {
+  color: #25d366;
+}
+
+.contact-action__icon circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-action__icon path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-action--whatsapp .contact-action__icon path {
+  stroke: var(--white);
+}
+
+.contact-actions .contact-action > span,
+.contact-actions .contact-action > strong {
+  grid-column: 2;
+}
+
 .contact-actions span {
   font-size: 10px;
   letter-spacing: 0.15em;
