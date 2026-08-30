@@ -17,9 +17,6 @@ const languageButtons = document.querySelectorAll(".language-switcher__button");
 const pageLinks = document.querySelectorAll("a[href$='.html']");
 const roomButtons = [...document.querySelectorAll("[data-room-target]")];
 const roomPanels = [...document.querySelectorAll("[data-room-panel]")];
-const greekUppercaseTargets = document.querySelectorAll(
-  "h1, h2, h3, h4, h5, h6, .section-label, .quote-card strong, .detail-list strong, .brand__title, .menu-nav a, .page-hero__panel p, .hero__card p, blockquote"
-);
 
 let lastFocusedElement = null;
 
@@ -105,21 +102,30 @@ const syncCurrentPageLinks = () => {
   });
 };
 
-const stripDiacritics = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const toGreekUppercase = (value) =>
+  value
+    .toLocaleUpperCase("el-GR")
+    .normalize("NFD")
+    .replace(/[\u0300\u0301\u0342]/g, "")
+    .normalize("NFC");
 
 const applyGreekUppercase = (language) => {
   if (language !== "el") {
     return;
   }
 
-  greekUppercaseTargets.forEach((node) => {
+  translatableTextNodes.forEach((node) => {
+    if (getComputedStyle(node).textTransform !== "uppercase") {
+      return;
+    }
+
     const text = node.textContent;
 
     if (!text) {
       return;
     }
 
-    node.textContent = stripDiacritics(text).toUpperCase();
+    node.textContent = toGreekUppercase(text);
   });
 };
 

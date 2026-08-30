@@ -376,6 +376,7 @@ body.scrolled .header-book:focus-visible {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: transparent;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -557,6 +558,7 @@ body.scrolled .header-book:focus-visible {
 .booking-dock strong {
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .booking-dock > a {
@@ -1082,6 +1084,7 @@ body.scrolled .header-book:focus-visible {
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .contact-actions a:hover strong,
