@@ -19,6 +19,8 @@ def build_variants(image_path: Path) -> dict:
     with Image.open(image_path) as image:
         width, height = image.size
         image = image.convert("RGB")
+        relative_stem = image_path.relative_to(ASSET_DIR).with_suffix("")
+        output_stem = "-".join(relative_stem.parts)
 
         output_variants = []
         widths = sorted({candidate for candidate in TARGET_WIDTHS if candidate <= width - 80} | {width})
@@ -26,7 +28,7 @@ def build_variants(image_path: Path) -> dict:
         for variant_width in widths:
           variant_height = round(height * (variant_width / width))
           resized = image.resize((variant_width, variant_height), Image.Resampling.LANCZOS)
-          variant_name = f"{image_path.stem}-{variant_width}.webp"
+          variant_name = f"{output_stem}-{variant_width}.webp"
           variant_path = OUTPUT_DIR / variant_name
           resized.save(variant_path, "WEBP", quality=QUALITY, method=6)
           output_variants.append(
@@ -38,7 +40,7 @@ def build_variants(image_path: Path) -> dict:
           )
 
     return {
-        "source": image_path.name,
+        "source": image_path.relative_to(ASSET_DIR).as_posix(),
         "width": width,
         "height": height,
         "variants": output_variants,
@@ -51,15 +53,15 @@ def main() -> None:
     manifest = {}
 
     image_paths = sorted(
-        [
-            *ASSET_DIR.glob("*.png"),
-            *ASSET_DIR.glob("*.jpg"),
-            *ASSET_DIR.glob("*.jpeg"),
-        ]
+        image_path
+        for pattern in ("*.png", "*.jpg", "*.jpeg")
+        for image_path in ASSET_DIR.rglob(pattern)
+        if OUTPUT_DIR not in image_path.parents
     )
 
     for image_path in image_paths:
-        manifest[image_path.stem] = build_variants(image_path)
+        key = image_path.relative_to(ASSET_DIR).with_suffix("").as_posix()
+        manifest[key] = build_variants(image_path)
 
     manifest_path = OUTPUT_DIR / "image-manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")

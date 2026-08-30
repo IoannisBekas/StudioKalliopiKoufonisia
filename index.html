@@ -9,9 +9,8 @@
     data-i18n-content="homeMetaDescription"
     content="Studios Kalliopi Koufonisia. Ήσυχη κυκλαδίτικη διαμονή με λευκούς χώρους, μπλε λεπτομέρειες, ζεστή φιλοξενία και απευθείας κράτηση μέσω τηλεφώνου ή WhatsApp."
   >
-  <meta name="theme-color" content="#0d2740">
+  <meta name="theme-color" content="#f2eee7">
 
-  <!-- Canonical & Open Graph -->
   <link rel="canonical" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/">
@@ -21,14 +20,13 @@
     data-i18n-content="homeOgDescription"
     content="Μπλε πόρτες, λευκοί τοίχοι, φωτεινά δωμάτια και άμεση νησιωτική φιλοξενία στα Κουφονήσια."
   >
-  <meta property="og:image" content="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/assets/optimized/stone-house-entry-1213.webp">
+  <meta property="og:image" content="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/assets/optimized/blue-door-patio-1213.webp">
   <meta property="og:image:width" content="1213">
-  <meta property="og:image:height" content="1186">
+  <meta property="og:image:height" content="786">
   <meta property="og:locale" content="el_GR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/assets/optimized/stone-house-entry-1213.webp">
+  <meta name="twitter:image" content="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/assets/optimized/blue-door-patio-1213.webp">
 
-  <!-- Hreflang for multilingual -->
   <link rel="alternate" hreflang="el" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/">
   <link rel="alternate" hreflang="en" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/?lang=en">
   <link rel="alternate" hreflang="it" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/?lang=it">
@@ -36,30 +34,18 @@
   <link rel="alternate" hreflang="de" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/?lang=de">
   <link rel="alternate" hreflang="x-default" href="https://ioannisbekas.github.io/StudioKalliopiKoufonisia/">
 
-  <!-- Icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-  <!-- DNS Prefetch for external services -->
   <link rel="dns-prefetch" href="//maps.google.com">
   <link rel="dns-prefetch" href="//wa.me">
   <link rel="dns-prefetch" href="//www.instagram.com">
   <link rel="preconnect" href="https://maps.google.com" crossorigin>
-
-  <!-- Font preload -->
   <link rel="preload" href="assets/fonts/BubbleSans-1.01.otf" as="font" type="font/otf" crossorigin>
-
-  <!-- Hero image preload -->
   <link
     rel="preload"
     as="image"
-    href="assets/optimized/stone-house-entry-1213.webp"
-    imagesrcset="
-      assets/optimized/stone-house-entry-640.webp 640w,
-      assets/optimized/stone-house-entry-960.webp 960w,
-      assets/optimized/stone-house-entry-1213.webp 1213w
-    "
-    imagesizes="(max-width: 900px) 100vw, 44vw"
+    href="assets/optimized/blue-door-patio-1213.webp"
+    imagesrcset="assets/optimized/blue-door-patio-640.webp 640w, assets/optimized/blue-door-patio-960.webp 960w, assets/optimized/blue-door-patio-1213.webp 1213w"
+    imagesizes="100vw"
     fetchpriority="high"
   >
   <link rel="stylesheet" href="styles.css">
@@ -78,31 +64,28 @@
       },
       "sameAs": [
         "https://www.instagram.com/studio.kalliopi_koufonisia/"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "133"
-      }
+      ]
     }
   </script>
 </head>
-<body data-page="home" data-page-title-key="homeDocumentTitle">
+<body id="top" data-page="home" data-page-title-key="homeDocumentTitle">
   <a class="skip-link" href="#main-content" data-i18n="skipLink">Μετάβαση στο περιεχόμενο</a>
 
   <header class="site-header" data-site-header>
-    <div class="container site-header__inner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" data-i18n-aria-label="brandHome">
-        <span class="brand__eyebrow">Studios Kalliopi</span>
-        <strong class="brand__title" data-i18n="brandTitle">Κουφονήσια</strong>
+        <span class="brand__mark" aria-hidden="true">K</span>
+        <span class="brand__copy">
+          <strong>Studios Kalliopi</strong>
+          <span data-i18n="brandTitle">Κουφονήσια</span>
+        </span>
       </a>
 
-      <nav class="desktop-nav" data-i18n-aria-label="primaryNavigation">
-        <a href="index.html" data-i18n="navHome">Αρχική</a>
+      <nav class="desktop-nav" data-i18n-aria-label="primaryNavigation" aria-label="Κύρια πλοήγηση">
+        <a href="#top" data-i18n="navHome">Αρχική</a>
         <a href="#stay" data-i18n="navStay">Διαμονή</a>
         <a href="#location" data-i18n="navLocation">Τοποθεσία</a>
-        <a href="#reviews" data-i18n="navReviews">Κριτικές</a>
-        <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
+        <a href="#amenities" data-i18n="navReviews">Παροχές</a>
       </nav>
 
       <div class="header-actions">
@@ -113,7 +96,7 @@
           <button class="language-switcher__button" type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
           <button class="language-switcher__button" type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
         </div>
-        <a class="header-call" href="tel:+306970041542" data-i18n="callOrWhatsApp">Κλήση ή WhatsApp</a>
+        <a class="header-book" href="#contact" data-i18n="contactStepsLabel">Απευθείας κράτηση</a>
         <button
           class="menu-toggle"
           type="button"
@@ -121,9 +104,8 @@
           aria-controls="site-menu"
           data-i18n-aria-label="openMenu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span>MENU</span>
+          <i aria-hidden="true"></i>
         </button>
       </div>
     </div>
@@ -133,14 +115,25 @@
     class="menu-panel"
     id="site-menu"
     aria-hidden="true"
+    inert
     role="dialog"
     aria-modal="true"
     aria-labelledby="menu-title"
     tabindex="-1"
   >
-    <div class="menu-panel__inner">
-      <h2 class="sr-only" id="menu-title" data-i18n="menuTitle">Πλοήγηση ιστοτόπου</h2>
-      <div class="menu-panel__tools">
+    <div class="menu-panel__content">
+      <div class="menu-panel__main">
+        <div class="menu-panel__tools">
+          <p id="menu-title">Studios Kalliopi</p>
+          <button class="menu-close" type="button" data-i18n="close" data-i18n-aria-label="closeMenu">Κλείσιμο</button>
+        </div>
+        <nav class="menu-nav" data-i18n-aria-label="expandedNavigation" aria-label="Αναπτυγμένη πλοήγηση">
+          <a href="#top" data-i18n="navHome">Αρχική</a>
+          <a href="#stay" data-i18n="navStay">Διαμονή</a>
+          <a href="#location" data-i18n="navLocation">Τοποθεσία</a>
+          <a href="#amenities" data-i18n="navReviews">Παροχές</a>
+          <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
+        </nav>
         <div class="language-switcher language-switcher--menu" role="group" data-i18n-aria-label="languageSelector">
           <button class="language-switcher__button is-active" type="button" data-lang="el" lang="el" aria-label="Ελληνικά" aria-pressed="true">EL</button>
           <button class="language-switcher__button" type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
@@ -148,143 +141,191 @@
           <button class="language-switcher__button" type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
           <button class="language-switcher__button" type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
         </div>
-        <button class="menu-close" type="button" data-i18n="close" data-i18n-aria-label="closeMenu">Κλείσιμο</button>
       </div>
-      <nav class="menu-nav" data-i18n-aria-label="expandedNavigation">
-        <a href="index.html" data-i18n="navHome">Αρχική</a>
-        <a href="#stay" data-i18n="navStay">Διαμονή</a>
-        <a href="#location" data-i18n="navLocation">Τοποθεσία</a>
-        <a href="#reviews" data-i18n="navReviews">Κριτικές</a>
-        <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
-        <a href="https://www.instagram.com/studio.kalliopi_koufonisia/" target="_blank" rel="noreferrer" data-i18n="instagram">Instagram</a>
-      </nav>
+      <div class="menu-panel__visual" aria-hidden="true">
+        <img src="assets/optimized/stone-house-entry-1213.webp" alt="" width="1213" height="1186">
+        <span>Koufonisia · 843 00</span>
+      </div>
     </div>
   </aside>
 
   <main id="main-content" tabindex="-1">
-    <section class="page-hero">
-      <div class="container page-hero__grid">
-        <div class="page-hero__copy reveal reveal-left">
-          <p class="page-hero__eyebrow" data-i18n="homeEyebrow">Ήσυχη κυκλαδίτικη αισθητική</p>
-          <h1 data-i18n="homeTitle">ΜΙΑ ΜΙΚΡΗ ΝΗΣΙΩΤΙΚΗ ΔΙΑΜΟΝΗ ΜΕ ΜΠΛΕ ΠΟΡΤΕΣ, ΛΕΥΚΟ ΦΩΣ ΚΑΙ ΖΕΣΤΗ ΦΙΛΟΞΕΝΙΑ.</h1>
-          <p class="page-hero__lede" data-i18n="homeLede">
-            Το Studios Kalliopi είναι για επισκέπτες που θέλουν τα Κουφονήσια να μοιάζουν απλά,
-            φωτεινά και προσωπικά. Χωρίς περιττή πολυτέλεια. Μόνο μια προσεγμένη βάση και
-            άμεση φιλοξενία.
-          </p>
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero__media">
+        <source
+          srcset="assets/optimized/blue-door-patio-640.webp 640w, assets/optimized/blue-door-patio-960.webp 960w, assets/optimized/blue-door-patio-1213.webp 1213w"
+          sizes="100vw"
+        >
+        <img
+          src="assets/optimized/blue-door-patio-1213.webp"
+          width="1213"
+          height="786"
+          data-i18n-alt="patioImageAlt"
+          alt="Αίθριο με καθίσματα και μπλε παραθυρόφυλλα στο Studios Kalliopi"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </picture>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="homeEyebrow">Ήσυχη κυκλαδίτικη αισθητική</p>
+        <h1 id="hero-title" data-i18n="homeTitle">ΜΙΑ ΜΙΚΡΗ ΝΗΣΙΩΤΙΚΗ ΔΙΑΜΟΝΗ ΜΕ ΜΠΛΕ ΠΟΡΤΕΣ, ΛΕΥΚΟ ΦΩΣ ΚΑΙ ΖΕΣΤΗ ΦΙΛΟΞΕΝΙΑ.</h1>
+        <a class="hero__scroll" href="#story">
+          <span data-i18n="homeWelcomeLabel">Καλωσόρισμα</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </div>
 
-          <div class="page-hero__actions">
-            <a class="button button--solid" href="tel:+306970041542" data-i18n="callNow">Καλέστε τώρα</a>
-            <a class="button button--outline" href="https://wa.me/306970041542" target="_blank" rel="noreferrer" data-i18n="whatsapp">WhatsApp</a>
-            <a class="button button--ghost" href="#contact" data-i18n="homeContactButton">Ενότητα επικοινωνίας</a>
-          </div>
-
-          <div class="facts-row">
-            <div>
-              <strong>4.9 / 5</strong>
-              <span data-i18n="googleRating">Βαθμολογία Google</span>
-            </div>
-            <div>
-              <strong>133</strong>
-              <span data-i18n="navReviews">Κριτικές</span>
-            </div>
-            <div>
-              <strong>843 00</strong>
-              <span data-i18n="homeFactLocation">Κουφονήσια</span>
-            </div>
-          </div>
+      <div class="booking-dock" role="group" data-i18n-aria-label="bookingDockLabel" aria-label="Στοιχεία απευθείας κράτησης">
+        <div class="booking-dock__item">
+          <span data-i18n="bookingLocationLabel">Τοποθεσία</span>
+          <strong data-i18n="homeFactLocation">Κουφονήσια</strong>
         </div>
-
-        <div class="page-hero__visual reveal reveal-right wipe-right">
-          <figure class="page-hero__figure page-hero__figure--arch">
-            <img
-              src="assets/optimized/stone-house-entry-1213.webp"
-              srcset="
-                assets/optimized/stone-house-entry-640.webp 640w,
-                assets/optimized/stone-house-entry-960.webp 960w,
-                assets/optimized/stone-house-entry-1213.webp 1213w
-              "
-              sizes="(max-width: 1100px) 100vw, 42vw"
-              width="1213"
-              height="1186"
-              data-i18n-alt="heroImageAlt"
-              alt="Λευκή είσοδος με μπλε πόρτα στο Studios Kalliopi"
-              fetchpriority="high"
-              decoding="async"
-              data-parallax="0.1"
-            >
-          </figure>
-          <div class="page-hero__panel reveal reveal-up">
-            <p data-i18n="homePanelTitle">Η απευθείας κράτηση ταιριάζει καλύτερα εδώ.</p>
-            <span data-i18n="homePanelText">Το τηλέφωνο και το WhatsApp κρατούν την επικοινωνία προσωπική από την πρώτη στιγμή.</span>
-          </div>
+        <div class="booking-dock__item">
+          <span data-i18n="bookingDatesLabel">Διαθεσιμότητα</span>
+          <strong data-i18n="bookingAvailability">Ρωτήστε για διαθεσιμότητα</strong>
         </div>
+        <a href="https://wa.me/306970041542" target="_blank" rel="noreferrer" data-i18n="whatsapp">WhatsApp</a>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container content-grid">
-        <div class="text-stack reveal reveal-left">
-          <p class="section-label" data-i18n="homeWelcomeLabel">Καλωσόρισμα</p>
-          <h2 data-i18n="homeWelcomeTitle">Μικρή κλίμακα, καθαροί χώροι και μια φιλοξενία που μένει ανθρώπινη.</h2>
-          <p data-i18n="homeWelcomeP1">
-            Η γοητεία του καταλύματος δεν βασίζεται στο εντυπωσιακό. Βασίζεται στην ισορροπία:
-            λευκή κυκλαδίτικη ταυτότητα, πρακτική άνεση, καθαρά μπάνια, μικρές εξωτερικές γωνιές
-            και ένα ύφος που δεν προσποιείται ότι είναι κάτι άλλο.
-          </p>
-          <p data-i18n="homeWelcomeP2">
-            Αυτό που χρειάζεται ένας επισκέπτης εδώ είναι καθαρότητα, ηρεμία, σωστή επικοινωνία
-            και ένα σημείο εκκίνησης που κάνει το νησί εύκολο να το ζήσεις.
-          </p>
-        </div>
-
-        <div class="stack-grid">
-          <div class="info-card reveal reveal-up">
-            <h3 data-i18n="homeInfoCard1Title">Άμεση επαφή</h3>
-            <p data-i18n="homeInfoCard1Text">Τηλέφωνο και WhatsApp κρατούν τις κρατήσεις γρήγορες, απλές και προσωπικές.</p>
-          </div>
-          <div class="info-card reveal reveal-up">
-            <h3 data-i18n="homeInfoCard2Title">Νησιωτική κλίμακα</h3>
-            <p data-i18n="homeInfoCard2Text">Το κατάλυμα δεν είναι resort. Είναι μια καθαρή, προσεγμένη βάση μέσα στον ρυθμό των Κουφονησίων.</p>
-          </div>
-        </div>
+    <section class="editorial-story" id="story">
+      <div class="editorial-story__media">
+        <img
+          src="assets/optimized/stone-house-entry-1213.webp"
+          srcset="assets/optimized/stone-house-entry-640.webp 640w, assets/optimized/stone-house-entry-960.webp 960w, assets/optimized/stone-house-entry-1213.webp 1213w"
+          sizes="(max-width: 900px) 100vw, 58vw"
+          width="1213"
+          height="1186"
+          data-i18n-alt="heroImageAlt"
+          alt="Λευκή είσοδος με μπλε πόρτα στο Studios Kalliopi"
+          loading="lazy"
+          decoding="async"
+        >
+        <span class="media-label" data-i18n="photoLabel">Φωτογραφία καταλύματος</span>
+      </div>
+      <div class="editorial-story__copy">
+        <p class="section-kicker" data-i18n="homeWelcomeLabel">Καλωσόρισμα</p>
+        <h2 data-i18n="homeWelcomeTitle">Μικρή κλίμακα, καθαροί χώροι και μια φιλοξενία που μένει ανθρώπινη.</h2>
+        <p data-i18n="homeWelcomeP1">
+          Η γοητεία του καταλύματος βασίζεται στην ισορροπία: λευκή κυκλαδίτικη ταυτότητα,
+          πρακτική άνεση, καθαρά μπάνια και μικρές εξωτερικές γωνιές.
+        </p>
+        <a class="text-link" href="#stay" data-i18n="navStay">Διαμονή</a>
       </div>
     </section>
 
-    <section class="section" id="gallery">
-      <div class="container">
-        <div class="section-head reveal reveal-up">
-          <p class="section-label" data-i18n="homeGalleryLabel">Φωτογραφίες</p>
-          <h2 data-i18n="homeGalleryTitle">Μια πιο πλήρης ματιά στους χώρους και στις λεπτομέρειες.</h2>
+    <section class="rooms" id="stay">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" data-i18n="stayMomentsLabel">Χώροι και λεπτομέρειες</p>
+            <h2 data-i18n="staySectionTitle">Λευκές επιφάνειες, μπλε λεπτομέρειες και δωμάτια που δεν κουράζουν τον επισκέπτη.</h2>
+          </div>
+          <p data-i18n="staySectionP1">Η αίσθηση του καταλύματος είναι μικρής κλίμακας και χρήσιμη. Υπάρχει τάξη, φυσικό φως και πρακτική άνεση.</p>
         </div>
 
-        <div class="gallery__grid">
-          <figure class="gallery__image gallery__image--large reveal wipe-right">
+        <div class="room-browser" data-room-browser>
+          <div class="room-browser__choices" role="tablist" data-i18n-aria-label="stayFeatures">
+            <button class="room-choice is-active" type="button" role="tab" aria-selected="true" data-room-target="double">
+              <span>01</span>
+              <strong data-i18n="roomDoubleTitle">Δίκλινο studio · concept</strong>
+              <small data-i18n="stayMoment1Text">Χώρος σωστού μεγέθους για απλή και καθαρή νησιωτική διαμονή.</small>
+            </button>
+            <button class="room-choice" type="button" role="tab" aria-selected="false" data-room-target="twin">
+              <span>02</span>
+              <strong data-i18n="roomTwinTitle">Studio με δύο κρεβάτια · concept</strong>
+              <small data-i18n="stayMoment2Text">Φωτεινό, πρακτικό και χωρίς περιττή επίδειξη.</small>
+            </button>
+            <button class="room-choice" type="button" role="tab" aria-selected="false" data-room-target="kitchenette">
+              <span>03</span>
+              <strong data-i18n="roomKitchenTitle">Μικρή κουζίνα · concept</strong>
+              <small data-i18n="amenity2">Βασικός εξοπλισμός κουζίνας</small>
+            </button>
+          </div>
+
+          <div class="room-browser__stage">
+            <figure class="room-panel is-active" role="tabpanel" data-room-panel="double">
+              <img
+                src="assets/optimized/generated-studio-double-concept-1440.webp"
+                srcset="assets/optimized/generated-studio-double-concept-640.webp 640w, assets/optimized/generated-studio-double-concept-960.webp 960w, assets/optimized/generated-studio-double-concept-1440.webp 1440w, assets/optimized/generated-studio-double-concept-2048.webp 2048w"
+                sizes="(max-width: 900px) 100vw, 62vw"
+                width="2048"
+                height="1152"
+                data-i18n-alt="conceptDoubleAlt"
+                alt="Ενδεικτική απεικόνιση δίκλινου κυκλαδίτικου studio"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="concept-label" data-i18n="conceptLabel">Ενδεικτική απεικόνιση με AI</figcaption>
+            </figure>
+            <figure class="room-panel" role="tabpanel" data-room-panel="twin" hidden>
+              <img
+                src="assets/optimized/generated-studio-twin-concept-1440.webp"
+                srcset="assets/optimized/generated-studio-twin-concept-640.webp 640w, assets/optimized/generated-studio-twin-concept-960.webp 960w, assets/optimized/generated-studio-twin-concept-1440.webp 1440w, assets/optimized/generated-studio-twin-concept-2048.webp 2048w"
+                sizes="(max-width: 900px) 100vw, 62vw"
+                width="2048"
+                height="1152"
+                data-i18n-alt="conceptTwinAlt"
+                alt="Ενδεικτική απεικόνιση κυκλαδίτικου studio με δύο κρεβάτια"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="concept-label" data-i18n="conceptLabel">Ενδεικτική απεικόνιση με AI</figcaption>
+            </figure>
+            <figure class="room-panel" role="tabpanel" data-room-panel="kitchenette" hidden>
+              <img
+                src="assets/optimized/generated-studio-kitchenette-concept-1440.webp"
+                srcset="assets/optimized/generated-studio-kitchenette-concept-640.webp 640w, assets/optimized/generated-studio-kitchenette-concept-960.webp 960w, assets/optimized/generated-studio-kitchenette-concept-1440.webp 1440w, assets/optimized/generated-studio-kitchenette-concept-2048.webp 2048w"
+                sizes="(max-width: 900px) 100vw, 62vw"
+                width="2048"
+                height="1536"
+                data-i18n-alt="conceptKitchenAlt"
+                alt="Ενδεικτική απεικόνιση μικρής κουζίνας σε κυκλαδίτικο studio"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="concept-label" data-i18n="conceptLabel">Ενδεικτική απεικόνιση με AI</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p class="concept-note" data-i18n="conceptNote">Οι νέες εικόνες δωματίων είναι ενδεικτικές απεικονίσεις και όχι φωτογραφίες συγκεκριμένου δωματίου. Επιβεβαιώστε τον χώρο κατά την κράτηση.</p>
+      </div>
+    </section>
+
+    <section class="amenities-section" id="amenities">
+      <div class="shell amenities-section__grid">
+        <div>
+          <p class="section-kicker" data-i18n="staySectionLabel">Στους χώρους</p>
+          <h2 data-i18n="staySectionP2">Λιγότερος θόρυβος, λιγότερη επίδειξη, περισσότερη ηρεμία.</h2>
+        </div>
+        <ul class="amenities-list" data-i18n-aria-label="stayFeatures">
+          <li data-i18n="amenity1">Ιδιωτικά μπάνια</li>
+          <li data-i18n="amenity2">Βασικός εξοπλισμός κουζίνας</li>
+          <li data-i18n="amenity3">Ψυγείο και TV</li>
+          <li data-i18n="amenity4">Μπαλκόνι ή αίθριο με χαρακτήρα</li>
+          <li data-i18n="amenityPortTransfer">Μεταφορά από το λιμάνι</li>
+          <li data-i18n="amenity6">Εύκολη πρόσβαση στον οικισμό</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-heading section-heading--compact">
+          <div>
+            <p class="section-kicker" data-i18n="homeGalleryLabel">Φωτογραφίες</p>
+            <h2 data-i18n="homeGalleryTitle">Μια πιο πλήρης ματιά στους χώρους και στις λεπτομέρειες.</h2>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--wide">
             <img
-              src="assets/optimized/stone-house-entry-1213.webp"
-              srcset="
-                assets/optimized/stone-house-entry-640.webp 640w,
-                assets/optimized/stone-house-entry-960.webp 960w,
-                assets/optimized/stone-house-entry-1213.webp 1213w
-              "
-              sizes="(max-width: 1100px) 100vw, 52vw"
-              width="1213"
-              height="1186"
-              data-i18n-alt="heroImageAlt"
-              alt="Λευκή είσοδος με μπλε πόρτα στο Studios Kalliopi"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
-          <figure class="gallery__image reveal wipe-left">
-            <img
-              src="assets/optimized/blue-door-patio-960.webp"
-              srcset="
-                assets/optimized/blue-door-patio-640.webp 640w,
-                assets/optimized/blue-door-patio-960.webp 960w,
-                assets/optimized/blue-door-patio-1213.webp 1213w
-              "
-              sizes="(max-width: 1100px) 100vw, 30vw"
+              src="assets/optimized/blue-door-patio-1213.webp"
+              srcset="assets/optimized/blue-door-patio-640.webp 640w, assets/optimized/blue-door-patio-960.webp 960w, assets/optimized/blue-door-patio-1213.webp 1213w"
+              sizes="(max-width: 760px) 100vw, 66vw"
               width="1213"
               height="786"
               data-i18n-alt="patioImageAlt"
@@ -292,15 +333,15 @@
               loading="lazy"
               decoding="async"
             >
+            <span class="media-label" data-i18n="photoLabel">Φωτογραφία καταλύματος</span>
+            <figcaption data-i18n="stayMoment3Title">Εξωτερικές γωνιές</figcaption>
           </figure>
-          <figure class="gallery__image gallery__image--small reveal wipe-right">
+
+          <figure class="gallery-card gallery-card--portrait">
             <img
               src="assets/optimized/bathroom-warm-962.webp"
-              srcset="
-                assets/optimized/bathroom-warm-640.webp 640w,
-                assets/optimized/bathroom-warm-962.webp 962w
-              "
-              sizes="(max-width: 1100px) 100vw, 24vw"
+              srcset="assets/optimized/bathroom-warm-640.webp 640w, assets/optimized/bathroom-warm-962.webp 962w"
+              sizes="(max-width: 760px) 100vw, 32vw"
               width="962"
               height="1210"
               data-i18n-alt="warmBathImageAlt"
@@ -308,399 +349,110 @@
               loading="lazy"
               decoding="async"
             >
+            <span class="media-label" data-i18n="photoLabel">Φωτογραφία καταλύματος</span>
+            <figcaption data-i18n="stayMoment2Title">Μπάνια</figcaption>
           </figure>
-          <figure class="gallery__image gallery__image--small reveal wipe-left">
+
+          <figure class="gallery-card gallery-card--full">
             <img
-              src="assets/optimized/bathroom-cool-951.webp"
-              srcset="
-                assets/optimized/bathroom-cool-640.webp 640w,
-                assets/optimized/bathroom-cool-951.webp 951w
-              "
-              sizes="(max-width: 1100px) 100vw, 24vw"
-              width="951"
-              height="1216"
-              data-i18n-alt="coolBathImageAlt"
-              alt="Μπάνιο με ψυχρούς τόνους στο Studios Kalliopi"
+              src="assets/optimized/generated-studio-balcony-concept-1440.webp"
+              srcset="assets/optimized/generated-studio-balcony-concept-640.webp 640w, assets/optimized/generated-studio-balcony-concept-960.webp 960w, assets/optimized/generated-studio-balcony-concept-1440.webp 1440w, assets/optimized/generated-studio-balcony-concept-2048.webp 2048w"
+              sizes="(min-width: 1700px) 1560px, 100vw"
+              width="2048"
+              height="1536"
+              data-i18n-alt="conceptBalconyAlt"
+              alt="Ενδεικτική απεικόνιση ιδιωτικού μπαλκονιού με θέα στον οικισμό"
               loading="lazy"
               decoding="async"
             >
-          </figure>
-          <figure class="gallery__image reveal wipe-right">
-            <img
-              src="assets/optimized/koufonisia-harbor-356.webp"
-              width="356"
-              height="475"
-              data-i18n-alt="harborImageAlt"
-              alt="Ατμόσφαιρα λιμανιού στα Κουφονήσια"
-              loading="lazy"
-              decoding="async"
-            >
+            <span class="concept-label" data-i18n="conceptLabel">Ενδεικτική απεικόνιση με AI</span>
+            <figcaption data-i18n="roomBalconyTitle">Μπαλκόνι με θέα · concept</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal reveal-up">
-          <p class="section-label" data-i18n="homeExploreLabel">Πλοήγηση</p>
-          <h2 data-i18n="homeExploreTitle">Κάθε βασικό μέρος της εμπειρίας έχει τώρα τη δική του ενότητα.</h2>
-        </div>
-
-        <div class="preview-grid">
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="homeCardStayTitle">Η διαμονή</h3>
-            <p data-i18n="homeCardStayText">Δείτε τα δωμάτια, τα μπάνια, τις λεπτομέρειες και τα στοιχεία που κάνουν το κατάλυμα πρακτικό και φωτεινό.</p>
-            <a href="#stay" data-i18n="navStay">Διαμονή</a>
-          </article>
-
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="homeCardLocationTitle">Η τοποθεσία</h3>
-            <p data-i18n="homeCardLocationText">Δείτε πώς το κατάλυμα σχετίζεται με το νησί, το λιμάνι, τη μικρή κλίμακα και την καθημερινή κίνηση.</p>
-            <a href="#location" data-i18n="navLocation">Τοποθεσία</a>
-          </article>
-
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="homeCardReviewsTitle">Οι κριτικές</h3>
-            <p data-i18n="homeCardReviewsText">Διαβάστε τι επαναλαμβάνεται ξανά και ξανά από τους επισκέπτες: καθαριότητα, φροντίδα και επιστροφή.</p>
-            <a href="#reviews" data-i18n="navReviews">Κριτικές</a>
-          </article>
-
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="homeCardContactTitle">Η επικοινωνία</h3>
-            <p data-i18n="homeCardContactText">Όλα τα βασικά σημεία επικοινωνίας είναι σε μία ενότητα για άμεση κράτηση και γρήγορες ερωτήσεις.</p>
-            <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
-          </article>
-        </div>
+    <section class="location-section" id="location">
+      <div class="location-section__image">
+        <img
+          src="assets/optimized/ano-koufonisi-g-lignum-1440.webp"
+          srcset="assets/optimized/ano-koufonisi-g-lignum-640.webp 640w, assets/optimized/ano-koufonisi-g-lignum-960.webp 960w, assets/optimized/ano-koufonisi-g-lignum-1440.webp 1440w, assets/optimized/ano-koufonisi-g-lignum-3959.webp 3959w"
+          sizes="(max-width: 991px) 100vw, 50vw"
+          width="3959"
+          height="2089"
+          data-i18n-alt="harborImageAlt"
+          alt="Ατμόσφαιρα λιμανιού στα Κουφονήσια"
+          loading="lazy"
+          decoding="async"
+        >
+        <span class="image-credit">
+          Photo: <a href="https://commons.wikimedia.org/wiki/File:Ano_Koufonisi.jpg" target="_blank" rel="noreferrer">G-Lignum / Wikimedia Commons</a>
+          · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a> · cropped
+        </span>
       </div>
-    </section>
-
-    <section class="section" id="stay">
-      <div class="container content-grid content-grid--gallery">
-        <div class="media-card media-card--tall reveal wipe-right">
-          <img
-            src="assets/optimized/stone-house-entry-1213.webp"
-            srcset="
-              assets/optimized/stone-house-entry-640.webp 640w,
-              assets/optimized/stone-house-entry-960.webp 960w,
-              assets/optimized/stone-house-entry-1213.webp 1213w
-            "
-            sizes="(max-width: 1100px) 100vw, 48vw"
-            width="1213"
-            height="1186"
-            data-i18n-alt="heroImageAlt"
-            alt="Λευκή είσοδος με μπλε πόρτα στο Studios Kalliopi"
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
-
-        <div class="text-stack reveal reveal-left">
-          <p class="section-label" data-i18n="staySectionLabel">Στους χώρους</p>
-          <h2 data-i18n="staySectionTitle">Λευκές επιφάνειες, μπλε λεπτομέρειες και δωμάτια που δεν κουράζουν τον επισκέπτη.</h2>
-          <p data-i18n="staySectionP1">Η αίσθηση του καταλύματος είναι μικρής κλίμακας και χρήσιμη. Δεν υπάρχει υπερβολή. Υπάρχει τάξη, φυσικό φως και πρακτική άνεση.</p>
-          <p data-i18n="staySectionP2">Αυτό ακριβώς ταιριάζει με τα Κουφονήσια: λιγότερος θόρυβος, λιγότερη επίδειξη, περισσότερη ηρεμία.</p>
-          <ul class="pill-list" data-i18n-aria-label="stayFeatures">
-            <li data-i18n="amenity1">Ιδιωτικά μπάνια</li>
-            <li data-i18n="amenity2">Βασικός εξοπλισμός κουζίνας</li>
-            <li data-i18n="amenity3">Ψυγείο και TV</li>
-            <li data-i18n="amenity4">Μπαλκόνι ή αίθριο με χαρακτήρα</li>
-            <li data-i18n="amenity5">Επικοινωνία με τηλέφωνο και WhatsApp</li>
-            <li data-i18n="amenity6">Εύκολη πρόσβαση στον οικισμό</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal reveal-up">
-          <p class="section-label" data-i18n="stayMomentsLabel">Χώροι και λεπτομέρειες</p>
-          <h2 data-i18n="stayMomentsTitle">Τρία πράγματα που δίνουν χαρακτήρα στη διαμονή.</h2>
-        </div>
-
-        <div class="preview-grid">
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="stayMoment1Title">Studios & apartments</h3>
-            <p data-i18n="stayMoment1Text">Χώροι σωστού μεγέθους για απλή, άνετη και καθαρή νησιωτική διαμονή.</p>
-          </article>
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="stayMoment2Title">Μπάνια</h3>
-            <p data-i18n="stayMoment2Text">Φρέσκα, καθαρά και πρακτικά, χωρίς υπερβολές αλλά με προσοχή στη λεπτομέρεια.</p>
-          </article>
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="stayMoment3Title">Εξωτερικές γωνιές</h3>
-            <p data-i18n="stayMoment3Text">Μπλε πόρτες, παραθυρόφυλλα και μικρά σημεία καθίσματος μέσα στο φως του νησιού.</p>
-          </article>
-          <article class="preview-card reveal reveal-up">
-            <h3 data-i18n="stayMoment4Title">Άμεση φιλοξενία</h3>
-            <p data-i18n="stayMoment4Text">Η εμπειρία δεν τελειώνει στο δωμάτιο. Συνεχίζεται μέσα από άμεση και ανθρώπινη επικοινωνία.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container media-pair">
-        <figure class="media-card media-card--medium reveal wipe-left">
-          <img
-            src="assets/optimized/bathroom-warm-962.webp"
-            srcset="
-              assets/optimized/bathroom-warm-640.webp 640w,
-              assets/optimized/bathroom-warm-962.webp 962w
-            "
-            sizes="(max-width: 1100px) 100vw, 46vw"
-            width="962"
-            height="1210"
-            data-i18n-alt="warmBathImageAlt"
-            alt="Μπάνιο με ζεστούς τόνους στο Studios Kalliopi"
-            loading="lazy"
-            decoding="async"
-          >
-        </figure>
-
-        <figure class="media-card media-card--medium reveal wipe-right">
-          <img
-            src="assets/optimized/bathroom-cool-951.webp"
-            srcset="
-              assets/optimized/bathroom-cool-640.webp 640w,
-              assets/optimized/bathroom-cool-951.webp 951w
-            "
-            sizes="(max-width: 1100px) 100vw, 46vw"
-            width="951"
-            height="1216"
-            data-i18n-alt="coolBathImageAlt"
-            alt="Μπάνιο με ψυχρούς τόνους στο Studios Kalliopi"
-            loading="lazy"
-            decoding="async"
-          >
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" id="location">
-      <div class="container content-grid">
-        <div class="text-stack reveal reveal-left">
-          <p class="section-label" data-i18n="locationSectionLabel">Στο νησί</p>
-          <h2 data-i18n="locationSectionTitle">Η τοποθεσία λειτουργεί επειδή και το ίδιο το νησί λειτουργεί μικρά.</h2>
-          <p data-i18n="locationSectionP1">Αυτό που χρειάζεται να νιώσει ο επισκέπτης είναι ήρεμη άφιξη, φωτεινό λιμάνι, μικρές διαδρομές και η αίσθηση ότι τα βασικά βρίσκονται κοντά.</p>
-          <p data-i18n="locationSectionP2">Η σελίδα της τοποθεσίας δεν χρειάζεται να υπερβάλει. Χρειάζεται να δείξει ότι η διαμονή δένει φυσικά με τον ρυθμό των Κουφονησίων.</p>
-        </div>
-
-        <div class="info-grid">
-          <article class="info-card reveal reveal-up">
-            <h3 data-i18n="locationInfo1Title">Διεύθυνση</h3>
-            <p data-i18n="addressValue">Κουφονήσια 843 00, Ελλάδα</p>
-          </article>
-          <article class="info-card reveal reveal-up">
-            <h3 data-i18n="locationInfo2Title">Χάρτης</h3>
-            <p data-i18n="locationInfo2Text">Δείτε ακριβές σημείο και ξεκινήστε την πλοήγηση απευθείας από τους Χάρτες Google.</p>
-            <a class="inline-link" href="https://www.google.com/maps/search/?api=1&query=Studios+Kalliopi+Rooms+and+Apartments+Koufonisia" target="_blank" rel="noreferrer" data-i18n="openGoogleMaps">Άνοιγμα στους Χάρτες Google</a>
-          </article>
-          <article class="info-card reveal reveal-up">
-            <h3 data-i18n="locationInfo3Title">Αίσθηση νησιού</h3>
-            <p data-i18n="locationInfo3Text">Λιμάνι, λευκά σοκάκια, μικρές αποστάσεις και μια ατμόσφαιρα που δεν χρειάζεται βιασύνη.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container media-pair">
-        <figure class="media-card media-card--medium reveal wipe-right">
-          <img
-            src="assets/optimized/blue-door-patio-960.webp"
-            srcset="
-              assets/optimized/blue-door-patio-640.webp 640w,
-              assets/optimized/blue-door-patio-960.webp 960w,
-              assets/optimized/blue-door-patio-1213.webp 1213w
-            "
-            sizes="(max-width: 1100px) 100vw, 46vw"
-            width="1213"
-            height="786"
-            data-i18n-alt="patioImageAlt"
-            alt="Αίθριο με καθίσματα και μπλε παραθυρόφυλλα στο Studios Kalliopi"
-            loading="lazy"
-            decoding="async"
-          >
-        </figure>
-
-        <div class="info-card reveal reveal-left">
-          <h3 data-i18n="locationTravelTitle">Τι σημαίνει αυτό πρακτικά</h3>
-          <ul class="detail-list">
-            <li>
-              <strong data-i18n="locationTravel1Title">Άφιξη</strong>
-              <p data-i18n="locationTravel1Text">Η σωστή συνεννόηση πριν φτάσετε βοηθά τη διαμονή να ξεκινήσει ομαλά.</p>
-            </li>
-            <li>
-              <strong data-i18n="locationTravel2Title">Με τα πόδια</strong>
-              <p data-i18n="locationTravel2Text">Η μικρή κλίμακα του νησιού κάνει πολλές διαδρομές να μοιάζουν φυσικές και άμεσες.</p>
-            </li>
-            <li>
-              <strong data-i18n="locationTravel3Title">Ρυθμός</strong>
-              <p data-i18n="locationTravel3Text">Ο στόχος εδώ δεν είναι να προλάβετε πολλά. Είναι να κινείστε ήρεμα και σωστά.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reviews">
-      <div class="container">
-        <div class="section-head reveal reveal-up">
-          <p class="section-label" data-i18n="guestImpressions">Εντυπώσεις επισκεπτών</p>
-          <h2 data-i18n="reviewsQuotesTitle">Τρία μοτίβα που εμφανίζονται σταθερά στις κριτικές.</h2>
-        </div>
-
-        <div class="quote-grid">
-          <article class="quote-card reveal reveal-up">
-            <strong data-i18n="reviewQuote1Title">Επιστροφή και φιλοξενία</strong>
-            <p data-i18n="reviewQuote1Text">Επισκέπτες που γύρισαν για δεύτερη χρονιά μίλησαν για ελληνική φιλοξενία, σταθερή ποιότητα και αίσθηση οικειότητας.</p>
-            <span class="quote-card__meta" data-i18n="reviewQuote1Meta">Σύνοψη σχολίου επισκέπτη από Google</span>
-          </article>
-
-          <article class="quote-card reveal reveal-up">
-            <strong data-i18n="reviewQuote2Title">Θέα, θέση και άνεση</strong>
-            <p data-i18n="reviewQuote2Text">Άλλες κριτικές δίνουν έμφαση στη μεγάλη άνεση, τη φωτεινότητα και στις μπαλκονόπορτες ή τα μπαλκόνια με αίσθηση θάλασσας.</p>
-            <span class="quote-card__meta" data-i18n="reviewQuote2Meta">Σύνοψη σχολίου επισκέπτη από Google</span>
-          </article>
-
-          <article class="quote-card reveal reveal-up">
-            <strong data-i18n="reviewQuote3Title">Οργάνωση και βοήθεια</strong>
-            <p data-i18n="reviewQuote3Text">Επισκέπτες περιγράφουν σωστή οργάνωση, φιλική βοήθεια με την άφιξη και αίσθηση ότι το προσωπικό προσέχει πραγματικά τη διαμονή.</p>
-            <span class="quote-card__meta" data-i18n="reviewQuote3Meta">Σύνοψη σχολίου επισκέπτη από Google</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container content-grid">
-        <div class="info-card reveal reveal-left">
-          <h3 data-i18n="reviewsSummaryTitle">Τι λένε συνολικά οι κριτικές</h3>
-          <ul class="detail-list">
-            <li>
-              <strong data-i18n="reviewsSummary1Title">Καθαριότητα</strong>
-              <p data-i18n="reviewsSummary1Text">Η καθαρότητα των χώρων εμφανίζεται ως σταθερό και ουσιαστικό πλεονέκτημα.</p>
-            </li>
-            <li>
-              <strong data-i18n="reviewsSummary2Title">Τοποθεσία</strong>
-              <p data-i18n="reviewsSummary2Text">Η θέση υποστηρίζει μια εύκολη και ήρεμη εμπειρία στο νησί.</p>
-            </li>
-            <li>
-              <strong data-i18n="reviewsSummary3Title">Φροντίδα</strong>
-              <p data-i18n="reviewsSummary3Text">Η διαφορά φαίνεται στην προσωπική αντιμετώπιση και στην πρόθεση να βοηθήσουν.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="cta-band reveal reveal-right">
-          <h2 data-i18n="reviewsCtaTitle">Αν αυτό που ψάχνετε είναι ήσυχη, προσωπική διαμονή, μιλήστε απευθείας.</h2>
-          <p data-i18n="reviewsCtaText">Οι κριτικές δείχνουν τι ήδη λειτουργεί. Το επόμενο βήμα είναι απλή επικοινωνία για ημερομηνίες και διαθεσιμότητα.</p>
-          <div class="button-row">
-            <a class="button button--solid" href="#contact" data-i18n="navContact">Επικοινωνία</a>
-            <a class="button button--outline" href="https://wa.me/306970041542" target="_blank" rel="noreferrer" data-i18n="whatsapp">WhatsApp</a>
+      <div class="location-section__copy">
+        <p class="section-kicker" data-i18n="locationSectionLabel">Στο νησί</p>
+        <h2 data-i18n="locationPageTitle">Μέσα στην κλίμακα των Κουφονησίων και κοντά στον ρυθμό τους.</h2>
+        <p data-i18n="locationSectionP1">Ήρεμη άφιξη, φωτεινό λιμάνι, μικρές διαδρομές και η αίσθηση ότι τα βασικά βρίσκονται κοντά.</p>
+        <dl class="location-facts">
+          <div>
+            <dt data-i18n="locationInfo1Title">Διεύθυνση</dt>
+            <dd data-i18n="addressValue">Κουφονήσια 843 00, Ελλάδα</dd>
           </div>
-        </div>
+          <div>
+            <dt data-i18n="locationInfo2Title">Χάρτης</dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=Studios+Kalliopi+Rooms+and+Apartments+Koufonisia" target="_blank" rel="noreferrer" data-i18n="openGoogleMaps">Άνοιγμα στους Χάρτες Google</a></dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container content-grid">
-        <div class="text-stack reveal reveal-left">
-          <p class="section-label" data-i18n="contact">Επικοινωνία</p>
+    <section class="contact-section" id="contact">
+      <div class="shell contact-section__inner">
+        <div>
+          <p class="section-kicker" data-i18n="contact">Επικοινωνία</p>
           <h2 data-i18n="contactHeading">Όλα τα βασικά στοιχεία επικοινωνίας σε ένα καθαρό σημείο.</h2>
-          <p data-i18n="contactP">Για το Studios Kalliopi, η άμεση επικοινωνία είναι μέρος της ταυτότητάς του. Χρησιμοποιήστε τηλέφωνο, WhatsApp ή Instagram για διαθεσιμότητα και ερωτήσεις.</p>
+          <p data-i18n="contactP">Χρησιμοποιήστε τηλέφωνο, WhatsApp ή Instagram για διαθεσιμότητα και ερωτήσεις.</p>
         </div>
-
-        <div class="contact__panel reveal reveal-right">
-          <ul class="contact__list">
-            <li>
-              <span data-i18n="phoneLabel">Τηλέφωνο</span>
-              <a href="tel:+306970041542">+30 697 004 1542</a>
-            </li>
-            <li>
-              <span data-i18n="whatsappLabel">WhatsApp</span>
-              <a href="https://wa.me/306970041542" target="_blank" rel="noreferrer">+30 697 004 1542</a>
-            </li>
-            <li>
-              <span data-i18n="addressLabel">Διεύθυνση</span>
-              <strong data-i18n="addressValue">Κουφονήσια 843 00, Ελλάδα</strong>
-            </li>
-            <li>
-              <span data-i18n="mapsLabel">Χάρτες</span>
-              <a href="https://www.google.com/maps/search/?api=1&query=Studios+Kalliopi+Rooms+and+Apartments+Koufonisia" target="_blank" rel="noreferrer" data-i18n="openGoogleMaps">Άνοιγμα στους Χάρτες Google</a>
-            </li>
-            <li>
-              <span data-i18n="instagram">Instagram</span>
-              <a href="https://www.instagram.com/studio.kalliopi_koufonisia/" target="_blank" rel="noreferrer">@studio.kalliopi_koufonisia</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal reveal-up">
-          <p class="section-label" data-i18n="contactStepsLabel">Απευθείας κράτηση</p>
-          <h2 data-i18n="contactStepsTitle">Τρία απλά βήματα για να κρατήσετε τη διαδικασία ξεκάθαρη.</h2>
-        </div>
-
-        <div class="steps-grid">
-          <article class="step-card reveal reveal-up">
-            <h3 data-i18n="contactStep1Title">Στείλτε ημερομηνίες</h3>
-            <p data-i18n="contactStep1Text">Ξεκινήστε με τις ημέρες που σας ενδιαφέρουν και τον αριθμό ατόμων.</p>
-          </article>
-          <article class="step-card reveal reveal-up">
-            <h3 data-i18n="contactStep2Title">Ρωτήστε ό,τι χρειάζεστε</h3>
-            <p data-i18n="contactStep2Text">Διαθεσιμότητα, πρόσβαση, άφιξη ή μικρές λεπτομέρειες της διαμονής.</p>
-          </article>
-          <article class="step-card reveal reveal-up">
-            <h3 data-i18n="contactStep3Title">Κλείστε απευθείας</h3>
-            <p data-i18n="contactStep3Text">Η επικοινωνία παραμένει προσωπική από την πρώτη ερώτηση μέχρι την άφιξη.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container cta-band reveal reveal-up">
-        <h2 data-i18n="homeCtaTitle">Η άμεση επαφή κρατά τη διαμονή προσωπική.</h2>
-        <p data-i18n="homeCtaText">Αν ο στόχος είναι μια καθαρή, ήρεμη και ανθρώπινη εμπειρία στα Κουφονήσια, η απευθείας επικοινωνία είναι το σωστό ξεκίνημα.</p>
-        <div class="button-row">
-          <a class="button button--solid" href="tel:+306970041542" data-i18n="callNow">Καλέστε τώρα</a>
-          <a class="button button--outline" href="https://wa.me/306970041542" target="_blank" rel="noreferrer" data-i18n="whatsapp">WhatsApp</a>
-          <a class="button button--ghost" href="#contact" data-i18n="navContact">Επικοινωνία</a>
+        <div class="contact-actions">
+          <a href="tel:+306970041542">
+            <span data-i18n="phoneLabel">Τηλέφωνο</span>
+            <strong>+30&nbsp;697&nbsp;004&nbsp;1542</strong>
+          </a>
+          <a href="https://wa.me/306970041542" target="_blank" rel="noreferrer">
+            <span data-i18n="whatsappLabel">WhatsApp</span>
+            <strong data-i18n="bookingAvailability">Ρωτήστε για διαθεσιμότητα</strong>
+          </a>
+          <a href="https://www.instagram.com/studio.kalliopi_koufonisia/" target="_blank" rel="noreferrer">
+            <span data-i18n="instagram">Instagram</span>
+            <strong>@studio.kalliopi_koufonisia</strong>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <p>Studios Kalliopi Koufonisia</p>
-      <nav data-i18n-aria-label="footerNavigation">
-        <a href="index.html" data-i18n="navHome">Αρχική</a>
+    <div class="shell site-footer__top">
+      <a class="brand brand--footer" href="index.html" data-i18n-aria-label="brandHome">
+        <span class="brand__mark" aria-hidden="true">K</span>
+        <span class="brand__copy">
+          <strong>Studios Kalliopi</strong>
+          <span data-i18n="brandTitle">Κουφονήσια</span>
+        </span>
+      </a>
+      <nav data-i18n-aria-label="footerNavigation" aria-label="Πλοήγηση υποσέλιδου">
         <a href="#stay" data-i18n="navStay">Διαμονή</a>
         <a href="#location" data-i18n="navLocation">Τοποθεσία</a>
-        <a href="#reviews" data-i18n="navReviews">Κριτικές</a>
+        <a href="#amenities" data-i18n="navReviews">Παροχές</a>
         <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
       </nav>
-      <p><span id="year"></span></p>
     </div>
-    <div class="container site-footer__credit">
-      <span data-i18n="footerCreditLabel">Η σελίδα δημιουργήθηκε από</span>
-      <a class="site-footer__credit-link" href="http://bisolutions.group/" target="_blank" rel="noreferrer">
-        <img
-          src="assets/bi-solutions-transparent.png"
-          data-i18n-alt="biLogoAlt"
-          alt="Λογότυπο BI Solutions"
-          width="280"
-          height="184"
-          loading="lazy"
-        >
-        <span>BI Solutions</span>
+    <div class="shell site-footer__bottom">
+      <p>© <span id="year"></span> Studios Kalliopi Koufonisia</p>
+      <a class="site-footer__credit" href="http://bisolutions.group/" target="_blank" rel="noreferrer">
+        <span data-i18n="footerCreditLabel">Η σελίδα δημιουργήθηκε από</span>
+        <strong>BI Solutions</strong>
       </a>
     </div>
   </footer>

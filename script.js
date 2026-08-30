@@ -8,25 +8,20 @@ const menuPanel = document.querySelector("#site-menu");
 const menuToggle = document.querySelector(".menu-toggle");
 const menuClose = document.querySelector(".menu-close");
 const menuLinks = document.querySelectorAll(".menu-nav a");
-const revealItems = document.querySelectorAll(".reveal");
-const staggerGroups = document.querySelectorAll(".stagger-group");
-const parallaxItems = document.querySelectorAll("[data-parallax]");
-const scrollShiftItems = document.querySelectorAll("[data-scroll-shift]");
-const inertRoots = document.querySelectorAll("#main-content, .site-footer, .mobile-bookbar");
-const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const compactMotionQuery = window.matchMedia("(max-width: 900px)");
+const inertRoots = document.querySelectorAll(".site-header, #main-content, .site-footer, .mobile-bookbar");
 const translatableTextNodes = document.querySelectorAll("[data-i18n]");
 const translatableAriaNodes = document.querySelectorAll("[data-i18n-aria-label]");
 const translatableAltNodes = document.querySelectorAll("[data-i18n-alt]");
 const translatableMetaNodes = document.querySelectorAll("[data-i18n-content]");
 const languageButtons = document.querySelectorAll(".language-switcher__button");
 const pageLinks = document.querySelectorAll("a[href$='.html']");
+const roomButtons = [...document.querySelectorAll("[data-room-target]")];
+const roomPanels = [...document.querySelectorAll("[data-room-panel]")];
 const greekUppercaseTargets = document.querySelectorAll(
   "h1, h2, h3, h4, h5, h6, .section-label, .quote-card strong, .detail-list strong, .brand__title, .menu-nav a, .page-hero__panel p, .hero__card p, blockquote"
 );
 
 let lastFocusedElement = null;
-let ticking = false;
 
 const normalizePage = (value) => {
   if (!value || value === "/") {
@@ -43,14 +38,6 @@ const currentPage = normalizePage(window.location.pathname);
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
-
-const prefersReducedMotion = () => reducedMotionQuery.matches;
-const prefersCompactMotion = () => compactMotionQuery.matches;
-
-const resetScrollEffectStyles = () => {
-  parallaxItems.forEach((item) => item.style.setProperty("--parallax-y", "0px"));
-  scrollShiftItems.forEach((item) => item.style.setProperty("--scroll-shift", "0px"));
-};
 
 const focusableMenuElements = () =>
   menuPanel
@@ -78,6 +65,16 @@ const getStoredLanguage = () => {
   } catch {
     return DEFAULT_LANGUAGE;
   }
+};
+
+const getRequestedLanguage = () => {
+  const queryLanguage = new URLSearchParams(window.location.search).get("lang");
+
+  if (queryLanguage && translations[queryLanguage]) {
+    return queryLanguage;
+  }
+
+  return getStoredLanguage();
 };
 
 const storeLanguage = (language) => {
@@ -185,6 +182,15 @@ const applyLanguage = (requestedLanguage, persist = true) => {
 
   if (persist) {
     storeLanguage(language);
+    const url = new URL(window.location.href);
+
+    if (language === DEFAULT_LANGUAGE) {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", language);
+    }
+
+    window.history.replaceState(null, "", url);
   }
 };
 
@@ -228,13 +234,14 @@ function openMenu() {
   }
 
   lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : menuToggle;
+  menuPanel.removeAttribute("inert");
   menuPanel.classList.add("is-open");
   menuPanel.setAttribute("aria-hidden", "false");
   menuToggle.setAttribute("aria-expanded", "true");
   body.classList.add("menu-open");
   setRootsInert(true);
+  menuClose?.focus();
   document.addEventListener("keydown", onMenuKeydown);
-  window.requestAnimationFrame(() => menuClose?.focus());
 }
 
 function closeMenu() {
@@ -243,7 +250,6 @@ function closeMenu() {
   }
 
   menuPanel.classList.remove("is-open");
-  menuPanel.setAttribute("aria-hidden", "true");
   menuToggle.setAttribute("aria-expanded", "false");
   body.classList.remove("menu-open");
   setRootsInert(false);
@@ -252,6 +258,9 @@ function closeMenu() {
   if (lastFocusedElement instanceof HTMLElement) {
     lastFocusedElement.focus();
   }
+
+  menuPanel.setAttribute("aria-hidden", "true");
+  menuPanel.setAttribute("inert", "");
 }
 
 menuToggle?.addEventListener("click", openMenu);
@@ -269,117 +278,73 @@ languageButtons.forEach((button) => {
   });
 });
 
-const activateGroup = (group) => {
-  group.querySelectorAll(".stagger-item").forEach((item, index) => {
-    item.style.transitionDelay = `${index * 110}ms`;
-    item.classList.add("is-visible");
+const activateRoom = (roomName) => {
+  roomButtons.forEach((button) => {
+    const isActive = button.dataset.roomTarget === roomName;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", isActive ? "true" : "false");
+    button.tabIndex = isActive ? 0 : -1;
+  });
+
+  roomPanels.forEach((panel) => {
+    const isActive = panel.dataset.roomPanel === roomName;
+    panel.classList.toggle("is-active", isActive);
+    panel.hidden = !isActive;
   });
 };
 
-const observeSections = () => {
-  if (prefersReducedMotion() || !("IntersectionObserver" in window)) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-    staggerGroups.forEach((group) => activateGroup(group));
-    return;
+roomButtons.forEach((button, index) => {
+  const roomName = button.dataset.roomTarget;
+  const panel = roomPanels.find((candidate) => candidate.dataset.roomPanel === roomName);
+
+  if (panel) {
+    const tabId = `room-tab-${roomName}`;
+    const panelId = `room-panel-${roomName}`;
+    button.id = tabId;
+    panel.id = panelId;
+    button.setAttribute("aria-controls", panelId);
+    panel.setAttribute("aria-labelledby", tabId);
   }
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      rootMargin: "0px 0px -10% 0px",
-      threshold: 0.12,
+  button.addEventListener("click", () => activateRoom(roomName));
+  button.addEventListener("mouseenter", () => {
+    if (window.matchMedia("(hover: hover)").matches) {
+      activateRoom(roomName);
     }
-  );
-
-  const staggerObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activateGroup(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      rootMargin: "0px 0px -8% 0px",
-      threshold: 0.1,
+  });
+  button.addEventListener("keydown", (event) => {
+    if (!["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
+      return;
     }
-  );
 
-  revealItems.forEach((item) => revealObserver.observe(item));
-  staggerGroups.forEach((group) => staggerObserver.observe(group));
-};
+    event.preventDefault();
+    const lastIndex = roomButtons.length - 1;
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? lastIndex
+        : event.key === "ArrowRight" || event.key === "ArrowDown"
+          ? (index + 1) % roomButtons.length
+          : (index - 1 + roomButtons.length) % roomButtons.length;
 
-const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const nextButton = roomButtons[nextIndex];
+    activateRoom(nextButton.dataset.roomTarget);
+    nextButton.focus();
+  });
+});
 
-const updateScrollEffects = () => {
+const initialRoom = roomButtons.find((button) => button.classList.contains("is-active"));
+
+if (initialRoom) {
+  activateRoom(initialRoom.dataset.roomTarget);
+}
+
+const syncHeaderState = () => {
   body.classList.toggle("scrolled", window.scrollY > 18);
-
-  if (prefersReducedMotion() || prefersCompactMotion()) {
-    resetScrollEffectStyles();
-    return;
-  }
-
-  const viewportHeight = window.innerHeight;
-
-  parallaxItems.forEach((item) => {
-    const rect = item.getBoundingClientRect();
-    const speed = Number(item.dataset.parallax || 0);
-    const center = rect.top + rect.height / 2;
-    const shift = (viewportHeight / 2 - center) * speed;
-    item.style.setProperty("--parallax-y", `${shift.toFixed(2)}px`);
-  });
-
-  scrollShiftItems.forEach((item) => {
-    const trigger = item.closest(".hero") || item;
-    const rect = trigger.getBoundingClientRect();
-    const amount = Number(item.dataset.scrollShift || 0);
-    const progress = clamp((0 - rect.top) / Math.max(rect.height * 0.85, 1), 0, 1);
-    item.style.setProperty("--scroll-shift", `${(amount * progress).toFixed(2)}px`);
-  });
 };
 
-const requestScrollUpdate = () => {
-  if (ticking) {
-    return;
-  }
-
-  ticking = true;
-  window.requestAnimationFrame(() => {
-    updateScrollEffects();
-    ticking = false;
-  });
-};
-
-applyLanguage(getStoredLanguage(), false);
+applyLanguage(getRequestedLanguage(), false);
 syncCurrentPageLinks();
-observeSections();
-updateScrollEffects();
+syncHeaderState();
 
-window.addEventListener("scroll", requestScrollUpdate, { passive: true });
-window.addEventListener("resize", requestScrollUpdate);
-window.addEventListener("load", requestScrollUpdate);
-
-const onReducedMotionChange = () => {
-  observeSections();
-  updateScrollEffects();
-};
-
-if (typeof reducedMotionQuery.addEventListener === "function") {
-  reducedMotionQuery.addEventListener("change", onReducedMotionChange);
-} else if (typeof reducedMotionQuery.addListener === "function") {
-  reducedMotionQuery.addListener(onReducedMotionChange);
-}
-
-if (typeof compactMotionQuery.addEventListener === "function") {
-  compactMotionQuery.addEventListener("change", onReducedMotionChange);
-} else if (typeof compactMotionQuery.addListener === "function") {
-  compactMotionQuery.addListener(onReducedMotionChange);
-}
+window.addEventListener("scroll", syncHeaderState, { passive: true });

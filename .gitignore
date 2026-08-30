@@ -5,3 +5,6 @@ extract_strings.py
 mathimatikos.css
 mathimatikos.js
 mc_qna.md
+.playwright-cli/
+.claude/
+assets/optimized/bi-solutions-transparent-257.webp

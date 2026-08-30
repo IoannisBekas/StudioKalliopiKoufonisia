@@ -1,4 +1,31 @@
 {
+  "ano-koufonisi-g-lignum": {
+    "source": "ano-koufonisi-g-lignum.jpg",
+    "width": 3959,
+    "height": 2089,
+    "variants": [
+      {
+        "file": "ano-koufonisi-g-lignum-640.webp",
+        "width": 640,
+        "height": 338
+      },
+      {
+        "file": "ano-koufonisi-g-lignum-960.webp",
+        "width": 960,
+        "height": 507
+      },
+      {
+        "file": "ano-koufonisi-g-lignum-1440.webp",
+        "width": 1440,
+        "height": 760
+      },
+      {
+        "file": "ano-koufonisi-g-lignum-3959.webp",
+        "width": 3959,
+        "height": 2089
+      }
+    ]
+  },
   "bathroom-cool": {
     "source": "bathroom-cool.png",
     "width": 951,
@@ -33,6 +60,18 @@
       }
     ]
   },
+  "bi-solutions-transparent": {
+    "source": "bi-solutions-transparent.png",
+    "width": 257,
+    "height": 256,
+    "variants": [
+      {
+        "file": "bi-solutions-transparent-257.webp",
+        "width": 257,
+        "height": 256
+      }
+    ]
+  },
   "blue-door-patio": {
     "source": "blue-door-patio.png",
     "width": 1213,
@@ -52,6 +91,114 @@
         "file": "blue-door-patio-1213.webp",
         "width": 1213,
         "height": 786
+      }
+    ]
+  },
+  "generated/studio-balcony-concept": {
+    "source": "generated/studio-balcony-concept.png",
+    "width": 2048,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "generated-studio-balcony-concept-640.webp",
+        "width": 640,
+        "height": 480
+      },
+      {
+        "file": "generated-studio-balcony-concept-960.webp",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "file": "generated-studio-balcony-concept-1440.webp",
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "file": "generated-studio-balcony-concept-2048.webp",
+        "width": 2048,
+        "height": 1536
+      }
+    ]
+  },
+  "generated/studio-double-concept": {
+    "source": "generated/studio-double-concept.png",
+    "width": 2048,
+    "height": 1152,
+    "variants": [
+      {
+        "file": "generated-studio-double-concept-640.webp",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "file": "generated-studio-double-concept-960.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "file": "generated-studio-double-concept-1440.webp",
+        "width": 1440,
+        "height": 810
+      },
+      {
+        "file": "generated-studio-double-concept-2048.webp",
+        "width": 2048,
+        "height": 1152
+      }
+    ]
+  },
+  "generated/studio-kitchenette-concept": {
+    "source": "generated/studio-kitchenette-concept.png",
+    "width": 2048,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "generated-studio-kitchenette-concept-640.webp",
+        "width": 640,
+        "height": 480
+      },
+      {
+        "file": "generated-studio-kitchenette-concept-960.webp",
+        "width": 960,
+        "height": 720
+      },
+      {
+        "file": "generated-studio-kitchenette-concept-1440.webp",
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "file": "generated-studio-kitchenette-concept-2048.webp",
+        "width": 2048,
+        "height": 1536
+      }
+    ]
+  },
+  "generated/studio-twin-concept": {
+    "source": "generated/studio-twin-concept.png",
+    "width": 2048,
+    "height": 1152,
+    "variants": [
+      {
+        "file": "generated-studio-twin-concept-640.webp",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "file": "generated-studio-twin-concept-960.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "file": "generated-studio-twin-concept-1440.webp",
+        "width": 1440,
+        "height": 810
+      },
+      {
+        "file": "generated-studio-twin-concept-2048.webp",
+        "width": 2048,
+        "height": 1152
       }
     ]
   },
