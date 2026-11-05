@@ -98,7 +98,6 @@ h3,
 .menu-nav,
 .booking-dock,
 .section-kicker,
-.room-choice strong,
 .gallery-card figcaption,
 .contact-actions strong {
   font-family: var(--display);
@@ -654,13 +653,9 @@ body.scrolled .header-book:focus-visible {
   text-transform: uppercase;
 }
 
-.rooms,
+.room-types,
 .gallery-section {
   padding-block: var(--section-space);
-}
-
-.rooms {
-  background: var(--shell);
 }
 
 .section-heading {
@@ -691,104 +686,56 @@ body.scrolled .header-book:focus-visible {
   max-width: 900px;
 }
 
-.room-browser {
+.room-types {
+  background: var(--shell);
+}
+
+.room-types__grid {
   display: grid;
-  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.72fr);
-  min-height: 660px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.room-type-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
   background: var(--paper);
 }
 
-.room-browser__choices {
-  display: grid;
-  align-content: stretch;
-  border: 1px solid var(--line);
-  border-right: 0;
-}
-
-.room-choice {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px 12px;
-  align-content: center;
+.room-type-card > img {
   width: 100%;
-  padding: 34px clamp(24px, 2.5vw, 44px);
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink-soft);
-  background: transparent;
-  text-align: left;
-  cursor: pointer;
-  transition: color 200ms ease, background-color 200ms ease, padding-left 200ms ease;
-}
-
-.room-choice:last-child {
-  border-bottom: 0;
-}
-
-.room-choice > span {
-  grid-row: 1 / 3;
-  padding-top: 5px;
-  font-size: 11px;
-  opacity: 0.5;
-}
-
-.room-choice strong {
-  font-size: clamp(24px, 2vw, 34px);
-  letter-spacing: -0.025em;
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
-.room-choice small {
-  max-width: 360px;
-  font-size: 13px;
-  line-height: 1.45;
-  opacity: 0.72;
-}
-
-.room-choice:hover,
-.room-choice:focus-visible,
-.room-choice.is-active {
-  padding-left: clamp(30px, 3.2vw, 56px);
-  color: var(--white);
-  background: var(--cobalt);
-}
-
-.room-choice:focus-visible {
-  outline: 3px solid var(--white);
-  outline-offset: -7px;
-  box-shadow: inset 0 0 0 5px var(--ink);
-}
-
-.room-browser__stage {
-  position: relative;
-  min-width: 0;
-  min-height: 660px;
-  overflow: hidden;
-  background: #c8c1b5;
-}
-
-.room-panel {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  animation: room-panel-in 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.room-panel img {
-  width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+  object-position: center;
 }
 
-.concept-note {
-  max-width: 900px;
-  margin-top: 22px;
-  padding-left: 14px;
-  border-left: 2px solid var(--cobalt);
-  font-size: 12px;
-  color: rgba(24, 33, 38, 0.68);
+.room-type-card__copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: clamp(22px, 2.5vw, 36px);
+}
+
+.room-type-card h3 {
+  font-size: clamp(28px, 2.8vw, 40px);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.room-type-card p {
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.room-type-card .text-link {
+  max-width: 100%;
+  margin-top: auto;
 }
 
 .gallery-section {
@@ -803,6 +750,8 @@ body.scrolled .header-book:focus-visible {
 
 .gallery-card {
   position: relative;
+  width: 100%;
+  min-width: 0;
   min-height: 520px;
   overflow: hidden;
   background: var(--sand);
@@ -867,43 +816,53 @@ body.scrolled .header-book:focus-visible {
 
 .amenities-section__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-  gap: clamp(60px, 10vw, 170px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
   align-items: start;
 }
 
-.amenities-section h2 {
-  max-width: 700px;
-  font-size: clamp(38px, 4.8vw, 76px);
-  letter-spacing: -0.04em;
-  line-height: 1.02;
+.amenities-section__grid > .section-kicker {
+  margin-bottom: 0;
+}
+
+.amenities-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 36px;
+  align-items: start;
+}
+
+.amenities-groups > section {
+  min-width: 0;
+}
+
+.amenities-groups h3 {
+  margin-bottom: 18px;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .amenities-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 34px;
-  counter-reset: amenity;
+  padding-left: 18px;
+  list-style: disc;
 }
 
 .amenities-list li {
-  position: relative;
-  min-height: 76px;
-  padding: 25px 0 20px 42px;
+  padding: 15px 0 15px 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  counter-increment: amenity;
   font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
-.amenities-list li::before {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  content: "0" counter(amenity);
-  font-family: var(--display);
-  font-size: 10px;
-  opacity: 0.6;
+.amenities-list li::marker {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.7em;
 }
 
 .location-section {
@@ -1014,7 +973,7 @@ body.scrolled .header-book:focus-visible {
   text-transform: uppercase;
 }
 
-.contact-section__inner > div:first-child > p:last-child {
+.contact-section__inner > div:first-child > p:not(.section-kicker) {
   max-width: 620px;
   margin-top: 34px;
   color: rgba(255, 255, 255, 0.72);
@@ -1087,9 +1046,139 @@ body.scrolled .header-book:focus-visible {
   text-transform: uppercase;
 }
 
+.contact-actions .contact-action--email {
+  min-width: 0;
+}
+
+.contact-actions .contact-action--email strong {
+  font-family: var(--body);
+  font-size: clamp(18px, 1.8vw, 24px);
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
 .contact-actions a:hover strong,
 .contact-actions a:focus-visible strong {
   color: #9ec1da;
+}
+
+.contact-policy-link {
+  margin-top: 28px;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+body[data-page="policy"] .site-header {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.policy-page {
+  max-width: 1120px;
+  padding-top: calc(var(--header-height) + clamp(48px, 7vw, 110px));
+  padding-bottom: var(--section-space);
+}
+
+.policy-page__header h1 {
+  max-width: 1050px;
+  margin-bottom: 30px;
+  font-size: clamp(36px, 5.5vw, 72px);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.policy-page__header > p:not(.section-kicker) {
+  max-width: 850px;
+}
+
+.policy-page__updated {
+  margin-top: 24px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.policy-page__content {
+  max-width: 900px;
+  margin-top: 56px;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.policy-page__content > section {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.policy-page__content h2 {
+  margin-bottom: 18px;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.policy-page__content p {
+  line-height: 1.7;
+}
+
+.policy-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.policy-rule {
+  padding: clamp(20px, 3vw, 32px);
+  background: var(--shell);
+  border-top: 3px solid var(--cobalt);
+}
+
+.policy-rule h3 {
+  margin-bottom: 16px;
+  color: var(--cobalt);
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.policy-page__content > .policy-contact {
+  padding: clamp(24px, 4vw, 44px);
+  color: var(--white);
+  background: var(--cobalt-deep);
+  border-top: 0;
+}
+
+.policy-contact .text-link {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 24px;
+  margin-right: 24px;
+  line-height: 1.7;
+}
+
+.policy-contact .policy-contact__email {
+  margin-right: 0;
+  font-family: var(--body);
+  font-size: clamp(15px, 1.4vw, 18px);
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.policy-page__content > .policy-exception {
+  padding: clamp(20px, 3vw, 32px);
+  border-top: 0;
+  border-left: 3px solid var(--cobalt);
+  background: var(--shell);
+}
+
+.policy-page__content > .text-link {
+  display: inline-block;
 }
 
 .site-footer {
@@ -1163,24 +1252,17 @@ body.scrolled .header-book:focus-visible {
   }
 }
 
-@keyframes room-panel-in {
-  from {
-    opacity: 0;
-    transform: scale(1.025);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @media (max-width: 1280px) {
   .site-header__inner {
     grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
   }
 
-  .room-browser {
-    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.45fr);
+}
+
+@media (max-width: 1100px) {
+  .room-types__grid,
+  .amenities-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1312,53 +1394,10 @@ body.scrolled .header-book:focus-visible {
     max-width: 650px;
   }
 
-  .room-browser {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    background: transparent;
-  }
-
-  .room-browser__choices {
-    grid-template-columns: repeat(3, minmax(230px, 1fr));
-    overflow-x: auto;
-    border-right: 1px solid var(--line);
-    border-bottom: 0;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .room-browser__choices::-webkit-scrollbar {
-    display: none;
-  }
-
-  .room-choice {
-    min-height: 190px;
-    border-right: 1px solid var(--line);
-    border-bottom: 0;
-    scroll-snap-align: start;
-  }
-
-  .room-choice:last-child {
-    border-right: 0;
-  }
-
-  .room-choice:hover,
-  .room-choice:focus-visible,
-  .room-choice.is-active {
-    padding-left: 30px;
-  }
-
-  .room-browser__stage {
-    min-height: 0;
-    aspect-ratio: 4 / 3;
-  }
-
-  .amenities-section__grid,
   .contact-section__inner {
     grid-template-columns: 1fr;
   }
 
-  .amenities-section__grid,
   .contact-section__inner {
     gap: 64px;
   }
@@ -1410,6 +1449,15 @@ body.scrolled .header-book:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .room-types__grid,
+  .amenities-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-rule-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero__eyebrow {
     font-size: 10px;
   }
@@ -1437,14 +1485,6 @@ body.scrolled .header-book:focus-visible {
     grid-column: auto;
     min-height: min(132vw, 680px);
     aspect-ratio: auto;
-  }
-
-  .amenities-section__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .amenities-list {
-    grid-template-columns: 1fr;
   }
 
   .location-facts > div {
@@ -1492,21 +1532,8 @@ body.scrolled .header-book:focus-visible {
   .section-heading h2,
   .editorial-story__copy h2,
   .location-section__copy h2,
-  .amenities-section h2,
   .contact-section h2 {
     font-size: clamp(34px, 9vw, 48px);
-  }
-
-  .room-choice {
-    min-height: 172px;
-  }
-
-  .room-browser__stage {
-    aspect-ratio: 3 / 4;
-  }
-
-  .room-panel img {
-    object-position: center;
   }
 
   .gallery-card,

@@ -14,9 +14,7 @@ const translatableAriaNodes = document.querySelectorAll("[data-i18n-aria-label]"
 const translatableAltNodes = document.querySelectorAll("[data-i18n-alt]");
 const translatableMetaNodes = document.querySelectorAll("[data-i18n-content]");
 const languageButtons = document.querySelectorAll(".language-switcher__button");
-const pageLinks = document.querySelectorAll("a[href$='.html']");
-const roomButtons = [...document.querySelectorAll("[data-room-target]")];
-const roomPanels = [...document.querySelectorAll("[data-room-panel]")];
+const pageLinks = document.querySelectorAll("a[href*='.html']");
 
 let lastFocusedElement = null;
 
@@ -186,6 +184,22 @@ const applyLanguage = (requestedLanguage, persist = true) => {
   syncLanguageButtons(language);
   applyGreekUppercase(language);
 
+  pageLinks.forEach((link) => {
+    const url = new URL(link.href);
+
+    if (url.origin !== window.location.origin) {
+      return;
+    }
+
+    if (language === DEFAULT_LANGUAGE) {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", language);
+    }
+
+    link.href = url.href;
+  });
+
   if (persist) {
     storeLanguage(language);
     const url = new URL(window.location.href);
@@ -283,67 +297,6 @@ languageButtons.forEach((button) => {
     applyLanguage(button.dataset.lang);
   });
 });
-
-const activateRoom = (roomName) => {
-  roomButtons.forEach((button) => {
-    const isActive = button.dataset.roomTarget === roomName;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-selected", isActive ? "true" : "false");
-    button.tabIndex = isActive ? 0 : -1;
-  });
-
-  roomPanels.forEach((panel) => {
-    const isActive = panel.dataset.roomPanel === roomName;
-    panel.classList.toggle("is-active", isActive);
-    panel.hidden = !isActive;
-  });
-};
-
-roomButtons.forEach((button, index) => {
-  const roomName = button.dataset.roomTarget;
-  const panel = roomPanels.find((candidate) => candidate.dataset.roomPanel === roomName);
-
-  if (panel) {
-    const tabId = `room-tab-${roomName}`;
-    const panelId = `room-panel-${roomName}`;
-    button.id = tabId;
-    panel.id = panelId;
-    button.setAttribute("aria-controls", panelId);
-    panel.setAttribute("aria-labelledby", tabId);
-  }
-
-  button.addEventListener("click", () => activateRoom(roomName));
-  button.addEventListener("mouseenter", () => {
-    if (window.matchMedia("(hover: hover)").matches) {
-      activateRoom(roomName);
-    }
-  });
-  button.addEventListener("keydown", (event) => {
-    if (!["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
-      return;
-    }
-
-    event.preventDefault();
-    const lastIndex = roomButtons.length - 1;
-    const nextIndex = event.key === "Home"
-      ? 0
-      : event.key === "End"
-        ? lastIndex
-        : event.key === "ArrowRight" || event.key === "ArrowDown"
-          ? (index + 1) % roomButtons.length
-          : (index - 1 + roomButtons.length) % roomButtons.length;
-
-    const nextButton = roomButtons[nextIndex];
-    activateRoom(nextButton.dataset.roomTarget);
-    nextButton.focus();
-  });
-});
-
-const initialRoom = roomButtons.find((button) => button.classList.contains("is-active"));
-
-if (initialRoom) {
-  activateRoom(initialRoom.dataset.roomTarget);
-}
 
 const syncHeaderState = () => {
   body.classList.toggle("scrolled", window.scrollY > 18);
