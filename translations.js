@@ -149,7 +149,7 @@ window.SITE_TRANSLATIONS = {
       roomDoubleTitle: "Δίκλινο studio · concept",
       roomTwinTitle: "Studio με δύο κρεβάτια · concept",
       roomKitchenTitle: "Μικρή κουζίνα · concept",
-      roomBalconyTitle: "Μπαλκόνι με θέα · concept",
+      roomBalconyTitle: "Μπαλκόνι με θέα",
       conceptLabel: "Ενδεικτική απεικόνιση με AI",
       conceptNote: "Οι νέες εικόνες δωματίων είναι ενδεικτικές απεικονίσεις και όχι φωτογραφίες συγκεκριμένου δωματίου. Επιβεβαιώστε τον χώρο κατά την κράτηση.",
       photoLabel: "Φωτογραφία καταλύματος",
@@ -252,7 +252,7 @@ window.SITE_TRANSLATIONS = {
       conceptDoubleAlt: "Ενδεικτική απεικόνιση δίκλινου κυκλαδίτικου studio",
       conceptTwinAlt: "Ενδεικτική απεικόνιση κυκλαδίτικου studio με δύο κρεβάτια",
       conceptKitchenAlt: "Ενδεικτική απεικόνιση μικρής κουζίνας σε κυκλαδίτικο studio",
-      conceptBalconyAlt: "Ενδεικτική απεικόνιση ιδιωτικού μπαλκονιού με θέα στον οικισμό",
+      balconyPhotoAlt: "Μπαλκόνι του Studio Kalliopi με τραπέζι, καρέκλες και θέα στη θάλασσα",
       biLogoAlt: "Λογότυπο BI Solutions"
     }
   },
@@ -406,7 +406,7 @@ window.SITE_TRANSLATIONS = {
       roomDoubleTitle: "Double studio · concept",
       roomTwinTitle: "Twin studio · concept",
       roomKitchenTitle: "Kitchenette · concept",
-      roomBalconyTitle: "Balcony view · concept",
+      roomBalconyTitle: "Balcony with a view",
       conceptLabel: "AI concept image",
       conceptNote: "The new room images are representative concepts, not photographs of a specific room. Please confirm the exact space when booking.",
       photoLabel: "Property photograph",
@@ -509,7 +509,7 @@ window.SITE_TRANSLATIONS = {
       conceptDoubleAlt: "Representative concept image of a Cycladic double studio",
       conceptTwinAlt: "Representative concept image of a Cycladic twin studio",
       conceptKitchenAlt: "Representative concept image of a compact studio kitchenette",
-      conceptBalconyAlt: "Representative concept image of a private balcony overlooking the village",
+      balconyPhotoAlt: "Studio Kalliopi balcony with a table, chairs and sea view",
       biLogoAlt: "BI Solutions logo"
     }
   },
@@ -663,7 +663,7 @@ window.SITE_TRANSLATIONS = {
       roomDoubleTitle: "Studio matrimoniale · concept",
       roomTwinTitle: "Studio con due letti · concept",
       roomKitchenTitle: "Angolo cottura · concept",
-      roomBalconyTitle: "Balcone con vista · concept",
+      roomBalconyTitle: "Balcone con vista",
       conceptLabel: "Immagine concept con AI",
       conceptNote: "Le nuove immagini delle camere sono rappresentazioni indicative, non fotografie di una camera specifica. Conferma lo spazio esatto al momento della prenotazione.",
       photoLabel: "Fotografia della struttura",
@@ -766,7 +766,7 @@ window.SITE_TRANSLATIONS = {
       conceptDoubleAlt: "Immagine concept indicativa di uno studio matrimoniale cicladico",
       conceptTwinAlt: "Immagine concept indicativa di uno studio cicladico con due letti",
       conceptKitchenAlt: "Immagine concept indicativa di un angolo cottura compatto",
-      conceptBalconyAlt: "Immagine concept indicativa di un balcone privato sul villaggio",
+      balconyPhotoAlt: "Balcone di Studio Kalliopi con tavolo, sedie e vista sul mare",
       biLogoAlt: "Logo BI Solutions"
     }
   },
@@ -920,7 +920,7 @@ window.SITE_TRANSLATIONS = {
       roomDoubleTitle: "Studio double · concept",
       roomTwinTitle: "Studio a deux lits · concept",
       roomKitchenTitle: "Kitchenette · concept",
-      roomBalconyTitle: "Balcon avec vue · concept",
+      roomBalconyTitle: "Balcon avec vue",
       conceptLabel: "Image concept generee par IA",
       conceptNote: "Les nouvelles images des chambres sont des representations indicatives, pas des photographies d'une chambre precise. Confirmez l'espace exact lors de la reservation.",
       photoLabel: "Photographie de l'hebergement",
@@ -1023,7 +1023,7 @@ window.SITE_TRANSLATIONS = {
       conceptDoubleAlt: "Image concept indicative d'un studio double cycladique",
       conceptTwinAlt: "Image concept indicative d'un studio cycladique a deux lits",
       conceptKitchenAlt: "Image concept indicative d'une kitchenette compacte",
-      conceptBalconyAlt: "Image concept indicative d'un balcon prive sur le village",
+      balconyPhotoAlt: "Balcon de Studio Kalliopi avec table, chaises et vue sur la mer",
       biLogoAlt: "Logo BI Solutions"
     }
   },
@@ -1177,7 +1177,7 @@ window.SITE_TRANSLATIONS = {
       roomDoubleTitle: "Doppelstudio · Konzept",
       roomTwinTitle: "Studio mit zwei Betten · Konzept",
       roomKitchenTitle: "Kuechenzeile · Konzept",
-      roomBalconyTitle: "Balkon mit Aussicht · Konzept",
+      roomBalconyTitle: "Balkon mit Aussicht",
       conceptLabel: "KI-Konzeptbild",
       conceptNote: "Die neuen Zimmerbilder sind beispielhafte Konzepte und keine Fotos eines bestimmten Zimmers. Bitte bestaetigen Sie den genauen Raum bei der Buchung.",
       photoLabel: "Foto der Unterkunft",
@@ -1280,7 +1280,7 @@ window.SITE_TRANSLATIONS = {
       conceptDoubleAlt: "Beispielhaftes Konzeptbild eines kykladischen Doppelstudios",
       conceptTwinAlt: "Beispielhaftes Konzeptbild eines kykladischen Studios mit zwei Betten",
       conceptKitchenAlt: "Beispielhaftes Konzeptbild einer kompakten Kuechenzeile",
-      conceptBalconyAlt: "Beispielhaftes Konzeptbild eines privaten Balkons mit Dorfblick",
+      balconyPhotoAlt: "Balkon bei Studio Kalliopi mit Tisch, Stühlen und Meerblick",
       biLogoAlt: "BI Solutions Logo"
     }
   }
